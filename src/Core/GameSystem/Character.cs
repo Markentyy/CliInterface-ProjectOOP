@@ -196,7 +196,7 @@ namespace CliInterface.Core.GameSystem
         /// cannot damage characters directly.
         /// </remarks>
         /// <param name="damage">The amount of damage to apply.</param>
-        internal void TakeDamage(int damage)
+        public void TakeDamage(int damage)
         {
             if (damage < 0)
                 throw new ArgumentOutOfRangeException(nameof(damage), "Damage must be >= 0.");

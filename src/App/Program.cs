@@ -1,3 +1,4 @@
+using CliFacade = CliInterface.Cli.Cli;
 using CliInterface.Cli;
 using CliInterface.Cli.Engine;
 using CliInterface.Cli.Rendering;
@@ -39,7 +40,7 @@ if (File.Exists(dataPath))
     }
 }
 
-CliInterface.Cli.Cli cli = new(console);
+CliFacade cli = new(console);
 cli.UseStrategy(new InfoStrategy(world, new CharacterTableRenderer(), new CharacterCardRenderer()));
 cli.UseStrategy(new TransformStrategy(world, store));
 cli.UseStrategy(new InfraStrategy(world, store));

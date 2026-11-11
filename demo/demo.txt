@@ -1,0 +1,23 @@
+help
+create char
+Gatekeeper
+100
+5
+10
+https://example.com/gate.png
+
+create item
+Steel Sword
+3
+2
+
+create ability
+Fireball
+3
+
+add --char_id Gatekeeper --id "Steel Sword"
+add --char_id Gatekeeper --id Fireball
+ls
+info "Gatekeeper"
+save
+exit

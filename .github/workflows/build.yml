@@ -1,0 +1,38 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build
+        run: dotnet build CliInterface.slnx --nologo
+
+      - name: Test
+        run: dotnet test --no-build --nologo
+
+      - name: Run demo and verify output
+        run: |
+          dotnet run --project src/App/App.csproj --no-build -- --data demo-world.json < demo/demo.txt > demo-out.txt
+          grep -q "Created character 'Gatekeeper' \[char-1\]" demo-out.txt
+          grep -q "Gatekeeper equipped Steel Sword (+3 ATK, +2 ARM)." demo-out.txt
+          grep -q "Gatekeeper learned Fireball \[ability-1\]." demo-out.txt
+          grep -q "Graphics: https://example.com/gate.png" demo-out.txt
+          grep -q "Saved to demo-world.json." demo-out.txt
