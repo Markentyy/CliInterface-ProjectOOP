@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="src/Core/Core.csproj" />
+  <Project Path="src/Data/Data.csproj" />
+  <Project Path="src/Cli/Cli.csproj" />
+  <Project Path="src/App/App.csproj" />
+  <Project Path="src/Tests.Core/Tests.Core.csproj" />
+  <Project Path="src/Tests.Data/Tests.Data.csproj" />
+  <Project Path="src/Tests.Cli/Tests.Cli.csproj" />
+</Solution>
