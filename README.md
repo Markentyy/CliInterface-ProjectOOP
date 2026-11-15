@@ -1,4 +1,4 @@
-# CliInterface - каталог персонажів через CLI-фасад
+# Каталог Персонажів
 
 ![build](https://github.com/Markentyy/CliInterface-ProjectOOP/actions/workflows/build.yml/badge.svg)
 ![dotnet](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)
