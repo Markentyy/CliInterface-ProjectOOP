@@ -5,8 +5,6 @@
 ![csharp](https://img.shields.io/badge/C%23-12-239120?logo=csharp&logoColor=white)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
-Навчальний проєкт за ТЗ "Командний інтерфейc додатку"
-
 ## Зміст
 
 - [Можливості](#можливості)
